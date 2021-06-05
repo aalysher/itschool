@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>request</title>
-</head>
-<body>
+{% extends 'core/homepage.html' %}
+
+{% block content %}
 <form action="" method="post">
     {{add_claim}}
     <button type="submit" class="btn btn-primary">Отпправить</button>
@@ -12,6 +8,4 @@
     <span>Для получения подробной консультации оставьте заявку на обратный звонок, и с Вами свяжутся в самое ближайшее время.</span>
     {% csrf_token %}
 </form>
-
-</body>
-</html>
+{% endblock %}

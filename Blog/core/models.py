@@ -6,6 +6,7 @@ class Course(models.Model):
     name = models.CharField("Название курса", max_length=100)
     start_date = models.DateTimeField('Начало курса')
     duration = models.CharField("Длительность курса", max_length=50)
+    description = models.TextField("Описание")
 
     def __str__(self):
         return self.name

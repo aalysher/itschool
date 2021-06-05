@@ -5,12 +5,18 @@
     <title>HomePage</title>
 </head>
 <body>
-<form action="" method="post">
-    <div class="list-group">
-        <a href="{% url 'claim' %}" class="list-group-item list-group-item-action">claim</a>
-        <a href="{% url 'course' %}" class="list-group-item list-group-item-action">course</a>
-        <a href="{% url 'mentors' %}" class="list-group-item list-group-item-action">mentors</a>
-    </div>
+{% block menu %}
+    <a href="{% url 'claim' %}" class="list-group-item list-group-item-action">claim</a>
+    <a href="{% url 'course' %}" class="list-group-item list-group-item-action">course</a>
+    <a href="{% url 'mentors' %}" class="list-group-item list-group-item-action">mentors</a>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+
+</div>
 </form>
 </body>
 </html>

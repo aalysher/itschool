@@ -21,6 +21,13 @@ def mentors_info(request):
     )
 
 
+def details(request, id):
+    course_details = Course.objects.get(id=id)
+    return render(request,
+                  'core/details.html',
+                  context={'detail': course_details})
+
+
 def course_info(request):
     all_course = Course.objects.all()
     return render(
