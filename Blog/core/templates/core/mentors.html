@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% for mentors in all_mentors %}
+    <h3>{{ mentors.surname}} {{ mentors.name }}</h3>
+    <div>{{ mentors.about }}</div>
+    {% endfor %}
+</form>
+</body>
+</html>

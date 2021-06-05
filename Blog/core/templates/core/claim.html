@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>request</title>
+</head>
+<body>
+<form action="" method="post">
+    {{add_claim}}
+    <button type="submit" class="btn btn-primary">Отпправить</button>
+    <h3>ЗАЯВКА НА ОБРАТНЫЙ ЗВОНОК</h3>
+    <span>Для получения подробной консультации оставьте заявку на обратный звонок, и с Вами свяжутся в самое ближайшее время.</span>
+    {% csrf_token %}
+</form>
+
+</body>
+</html>

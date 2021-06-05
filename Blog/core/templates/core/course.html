@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for course in all_course %}
+        <h3>{{course.name}}</h3>
+        <div>{{course.start_date}}</div>
+        <div>{{course.duration}}</div>
+    <hr>
+    {% endfor %}
+
+</body>
+</html>
