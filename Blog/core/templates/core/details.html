@@ -1,11 +1,11 @@
 {% extends 'core/homepage.html' %}
 
 {% block content %}
-    <h3>{Course.name}</h3>
-    <span>{Course.duration}</span>
-    <span>{Course.start_date}</span>
-    <div>{Course.description}</div>
+    {% for i in course_details %}
+    <h3>{{i.name}}</h3>
+    <span>{detail.duration}</span>
+    <span>{detail.start_date}</span>
+    <div>{detail.description}</div>
     <a href="{% url 'claim' %}" class="list-group-item list-group-item-action">claim</a>
-
-
+    {% endfor %}
 {% endblock %}
