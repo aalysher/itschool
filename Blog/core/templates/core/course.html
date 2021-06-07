@@ -1,11 +1,18 @@
 {% extends 'core/homepage.html' %}
 
 {% block content %}
-    {% for course in all_course %}
-    <h3>{{course.name}}</h3>
-    <div>{{course.start_date}}</div>
-    <div>{{course.duration}}</div>
-    <a href="{% url 'details' course.id %}"><span>Подробнее</span></a>
-    <hr>
-{% endfor %}
+<div class="container">
+    <div class="row">
+        {% for course in all_course %}
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <h3>{{course.name}}</h3>
+            <div>{{course.start_date}}</div>
+            <div>{{course.duration}}</div>
+            <a href="{% url 'details' course.id %}" class="button btn btn-primary">Подробнее</a>
+<!--            <button onclick="{% url 'details' course.id %}" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Подробнее</button>-->
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

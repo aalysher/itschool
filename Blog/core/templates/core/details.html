@@ -1,11 +1,33 @@
 {% extends 'core/homepage.html' %}
 
 {% block content %}
-    {% for i in course_details %}
-    <h3>{{i.name}}</h3>
-    <span>{detail.duration}</span>
-    <span>{detail.start_date}</span>
-    <div>{detail.description}</div>
-    <a href="{% url 'claim' %}" class="list-group-item list-group-item-action">claim</a>
-    {% endfor %}
+<h1>{{detail.name}}</h1>
+<h3>{{detail.duration}}</h3>
+<span>{{detail.duration}}</span>
+<span>{{detail.start_date}}</span>
+<div>{{detail.description}}</div>
+<a href="{% url 'claim' %}" class="list-group-item list-group-item-action">claim</a>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h1>{{detail.name}}</h1>
+                <h3>{{detail.duration}}</h3>
+                <span>{{detail.duration}}</span>
+                <span>{{detail.start_date}}</span>
+                <div>{{detail.description}}</div>
+                <a href="{% url 'claim' %}" class="list-group-item list-group-item-action">claim</a>
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'claim' %}" class="btn btn-secondary">claim</a>
+                <button onclick="" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

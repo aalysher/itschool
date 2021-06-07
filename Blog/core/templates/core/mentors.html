@@ -1,8 +1,19 @@
 {% extends 'core/homepage.html' %}
-
 {% block content %}
-    {% for mentors in all_mentors %}
-    <h3>{{ mentors.surname}} {{ mentors.name }}</h3>
-    <div>{{ mentors.about }}</div>
-    {% endfor %}
+<div class="container">
+    <div class="row">
+        {% for mentors in all_mentors %}
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card" style="width: 18rem;">
+                <img src="...}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ mentors.surname}} {{ mentors.name }}</h5>
+                    <h6 class="card-title">{{mentors.position}}</h6>
+                    <p class="card-text">{{ mentors.about}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
