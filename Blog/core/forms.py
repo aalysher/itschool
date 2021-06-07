@@ -5,4 +5,4 @@ from .models import *
 class ClaimForm(forms.ModelForm):
     class Meta:
         model = Claim
-        fields = '__all__'
+        fields = ('name', 'phone', 'email')
